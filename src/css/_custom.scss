@@ -1,0 +1,43 @@
+a.link-flip {
+	margin-left: 2px;
+	margin-right: 2px;
+	position: relative;
+
+	@include perspective(200px);
+	@include perspective-origin(50% 100%);
+	@include transition(color 300ms);
+
+	&:focus, &:hover {
+		color: #FFF;
+		text-decoration: none;
+	}
+
+	&::after, &::before {
+		box-sizing: content-box;
+		content: '';
+		height: 100%;
+		left: -4px;
+		padding: 0 4px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+
+	&::after {
+		border-bottom: 2px solid $brand-primary;
+	}
+
+	&::before {
+		background-color: $brand-primary;
+
+		@include transform(rotateX(90deg));
+		@include transform-origin(50% 100%);
+		@include transition(transform 200ms);
+		@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+	}
+
+	&:focus::before, &:hover::before {
+		@include transform(rotateX(0deg));
+	}
+}
