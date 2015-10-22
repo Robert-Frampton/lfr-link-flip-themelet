@@ -5,7 +5,8 @@
     "liferay-theme"
   ],
   "liferayTheme": {
+    "screenshot": "",
     "themelet": true,
-    "version": "7.0"
+    "version": "*"
   }
 }
