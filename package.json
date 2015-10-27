@@ -5,7 +5,7 @@
     "liferay-theme"
   ],
   "liferayTheme": {
-    "screenshot": "",
+    "screenshot": "https://raw.githubusercontent.com/Robert-Frampton/lfr-link-flip-themelet/master/preview.gif",
     "themelet": true,
     "version": "*"
   }
